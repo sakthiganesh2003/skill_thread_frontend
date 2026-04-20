@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom fonts and base styles */
+@import url('https://fonts.googleapis.com/css2?family=Georgia:ital,wght@0,400;0,700;1,400&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream text-dark font-sans;
+}
+
+/* Button utilities */
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-gold text-white font-medium rounded-sm hover:bg-gold-light transition-colors;
+  }
+
+  .btn-ghost {
+    @apply px-6 py-3 border border-gold text-gold font-medium rounded-sm hover:bg-gold/10 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-surface text-dark font-medium rounded-sm hover:bg-border transition-colors;
+  }
+
+  /* Card utilities */
+  .card {
+    @apply bg-white border border-border rounded-sm;
+  }
+
+  /* Typography */
+  .heading-serif {
+    @apply font-serif font-light;
+  }
+
+  .section-label {
+    @apply text-gold text-xs tracking-widest uppercase font-semibold mb-2;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}

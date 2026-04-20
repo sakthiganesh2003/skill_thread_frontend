@@ -1,0 +1,16 @@
+﻿src/app/admin/customizations/page.tsx(42,38): error TS2559: Type '(data: any) => Promise<AxiosResponse<any, any, {}>>' has no properties in common with type 'UseMutationOptions<unknown, Error, void, unknown>'.
+src/app/admin/customizations/page.tsx(43,52): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/app/admin/customizations/page.tsx(46,38): error TS2559: Type '({ id, data }: { id: string; data: any; }) => Promise<AxiosResponse<any, any, {}>>' has no properties in common with type 'UseMutationOptions<unknown, Error, void, unknown>'.
+src/app/admin/customizations/page.tsx(48,37): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/app/admin/customizations/page.tsx(54,38): error TS2559: Type '(id: string) => Promise<AxiosResponse<any, any, {}>>' has no properties in common with type 'UseMutationOptions<unknown, Error, void, unknown>'.
+src/app/admin/customizations/page.tsx(55,52): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/app/admin/customizations/page.tsx(66,40): error TS2345: Argument of type '{ id: string; data: { extra_price: number; garment_type: string; customization_type: string; option_name: string; is_active: boolean; }; }' is not assignable to parameter of type 'void'.
+src/app/admin/customizations/page.tsx(68,40): error TS2345: Argument of type '{ extra_price: number; garment_type: string; customization_type: string; option_name: string; is_active: boolean; }' is not assignable to parameter of type 'void'.
+src/app/admin/fabrics/page.tsx(43,38): error TS2559: Type '(data: any) => Promise<AxiosResponse<any, any, {}>>' has no properties in common with type 'UseMutationOptions<unknown, Error, void, unknown>'.
+src/app/admin/fabrics/page.tsx(44,52): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/app/admin/fabrics/page.tsx(47,38): error TS2559: Type '({ id, data }: { id: string; data: any; }) => Promise<AxiosResponse<any, any, {}>>' has no properties in common with type 'UseMutationOptions<unknown, Error, void, unknown>'.
+src/app/admin/fabrics/page.tsx(49,37): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/app/admin/fabrics/page.tsx(55,38): error TS2559: Type '(id: string) => Promise<AxiosResponse<any, any, {}>>' has no properties in common with type 'UseMutationOptions<unknown, Error, void, unknown>'.
+src/app/admin/fabrics/page.tsx(56,52): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/app/admin/fabrics/page.tsx(68,40): error TS2345: Argument of type '{ id: string; data: { price_per_meter: number; stock_quantity: number; name: string; type: string; image_url: string; is_active: boolean; }; }' is not assignable to parameter of type 'void'.
+src/app/admin/fabrics/page.tsx(70,40): error TS2345: Argument of type '{ price_per_meter: number; stock_quantity: number; name: string; type: string; image_url: string; is_active: boolean; }' is not assignable to parameter of type 'void'.
