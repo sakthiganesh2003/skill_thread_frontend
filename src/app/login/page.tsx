@@ -62,7 +62,8 @@ export default function LoginPage() {
       else router.push('/customer');
       
     } catch (err: any) {
-      setError(err.response?.data?.error || 'Authentication failed. Please check your credentials.');
+      const apiError = err.response?.data?.error || err.response?.data?.message;
+      setError(typeof apiError === 'string' ? apiError : (err.message || 'Authentication failed. Please check your credentials.'));
     } finally {
       setLoading(false);
     }
