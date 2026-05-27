@@ -105,7 +105,7 @@ export default function CustomOrderWizard() {
     
     // Customizations
     Object.entries(selectedCustomizations).forEach(([type, optName]) => {
-        const opt = customizations.find(c => 
+        const opt = customizations.find((c: any) => 
             c.customization_type === type && 
             c.option_name === optName && 
             (c.garment_type === garment.category || c.garment_type === 'all')
@@ -468,7 +468,7 @@ export default function CustomOrderWizard() {
                                 </div>
                             )}
                             {Object.entries(selectedCustomizations).map(([type, optName]) => {
-                                const opt = customizations.find(c => c.option_name === optName && c.customization_type === type);
+                                const opt = customizations.find((c: any) => c.option_name === optName && c.customization_type === type);
                                 if (!opt || opt.extra_price === 0) return null;
                                 return (
                                     <div key={type} className="flex justify-between border-b border-border/40 pb-2 text-gold">
