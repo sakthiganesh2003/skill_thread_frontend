@@ -20,7 +20,7 @@ export default function GarmentCard({ garment }: { garment: Garment }) {
       className="card p-6 cursor-pointer hover:shadow-lg transition-shadow flex flex-col h-full"
     >
       {garment.image_url ? (
-        <div className="w-full h-48 mb-4 bg-surface rounded-sm overflow-hidden flex-shrink-0 border border-border">
+        <div className="w-full aspect-[4/5] mb-4 bg-surface rounded-sm overflow-hidden flex-shrink-0 border border-border">
           <img 
             src={garment.image_url} 
             alt={garment.name} 
@@ -35,7 +35,7 @@ export default function GarmentCard({ garment }: { garment: Garment }) {
           />
         </div>
       ) : (
-        <div className="w-full h-48 mb-4 bg-surface rounded-sm flex items-center justify-center border border-border text-warm-gray text-xs uppercase tracking-widest">
+        <div className="w-full aspect-[4/5] mb-4 bg-surface rounded-sm flex items-center justify-center border border-border text-warm-gray text-xs uppercase tracking-widest">
           No Image
         </div>
       )}
