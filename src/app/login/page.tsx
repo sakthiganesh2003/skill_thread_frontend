@@ -243,20 +243,33 @@ export default function LoginPage() {
 
                 {/* Quick Demo Credentials */}
                 {!isRegister && (
-                    <div className="mt-8 grid grid-cols-3 gap-2">
-                        {[
-                            { role: 'Client', email: 'arjun@example.com' },
-                            { role: 'Artisan', email: 'ramesh@silkthread.in' },
-                            { role: 'Admin', email: 'admin@silkthread.in' }
-                        ].map(demo => (
-                            <button 
-                                key={demo.role}
-                                onClick={() => setFormData({ ...formData, email: demo.email, password: demo.role.toLowerCase() === 'client' ? 'pass123' : demo.role.toLowerCase() === 'artisan' ? 'tailor123' : 'admin123' })}
-                                className="bg-surface border border-border py-2 text-[8px] font-black uppercase tracking-tighter text-warm-gray hover:border-gold hover:text-gold transition-all"
-                            >
-                                {demo.role}
-                            </button>
-                        ))}
+                    <div className="mt-8 pt-6 border-t border-border">
+                        <p className="text-[10px] font-black uppercase tracking-widest text-warm-gray mb-4 text-center">
+                            Demo Credentials
+                        </p>
+                        <div className="grid grid-cols-1 gap-2">
+                            {[
+                                { role: 'Customer', email: 'arjun@example.com', pass: 'pass123' },
+                                { role: 'Tailor', email: 'ramesh@silkthread.in', pass: 'tailor123' },
+                                { role: 'Admin', email: 'admin@silkthread.in', pass: 'admin123' }
+                            ].map(demo => (
+                                <div key={demo.role} className="flex flex-col sm:flex-row items-center justify-between bg-surface border border-border p-3 hover:border-gold transition-all">
+                                    <div className="text-left mb-2 sm:mb-0">
+                                        <div className="text-[10px] font-black uppercase tracking-widest text-dark">{demo.role}</div>
+                                        <div className="text-xs text-warm-gray font-mono mt-1">
+                                            {demo.email} <span className="mx-2">|</span> {demo.pass}
+                                        </div>
+                                    </div>
+                                    <button 
+                                        type="button"
+                                        onClick={() => setFormData({ ...formData, email: demo.email, password: demo.pass })}
+                                        className="bg-dark text-white px-4 py-2 text-[10px] font-black uppercase tracking-widest hover:bg-gold hover:text-dark transition-colors"
+                                    >
+                                        Auto-Fill
+                                    </button>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 )}
             </div>
